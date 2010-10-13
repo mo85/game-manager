@@ -1,20 +1,23 @@
 <table class="default">
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th>Location</th>
+    <th>Beschreibung</th>
+    <th>Spieleranzahl</th>
+    <th>Spielort</th>
+    <th>Spielform</th>
 		<th>&nbsp;</th>
   </tr>
 
 <% games.each do |game| %>
   <tr>
-		<td><%= game.name %></td>
+		<td><%= link_to game.name, game %></td>
 		<td><%= game.description %></td>
-		<td><%= game.location %></td>
+		<td><%= game.players_to_s %></td>
+		<td><%= game.location_to_s %></td>
+		<td><%= game.form_to_s %></td>
 		
-    <td><%= link_to 'Show', game %><br />
-    <%= link_to 'Edit', edit_game_path(game) %><br />
-    <%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Anpassen', edit_game_path(game) %><br />
+    <%= link_to 'Löschen', game, :confirm => "Bist du sicher, dass das Spiel '#{game}' gelöscht werden soll?", :method => :delete %></td>
   </tr>
 <% end %>
 </table>

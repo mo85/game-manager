@@ -1,7 +1,9 @@
-<h1>Listing games</h1>
+<h1>Verfügbare Spiele</h1>
 
 <div>
 <%= render :partial => "games_table", :locals => { :games => @games } %>
 </div>
 
-<%= link_to 'New Game', new_game_path %>
+<p>
+	<%= link_to "Home", "/" %> | <%= link_to 'Neues Spiel erfassen', new_game_path %>
+</p>

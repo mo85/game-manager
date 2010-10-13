@@ -1,20 +1,35 @@
 <% form_for @game, :html => { :class => :default } do |f| %>
 
 <div>
-	<%= f.label :name %>
+	<%= f.label "Name" %>
 	<%= f.text_field :name %>
 </div>
 
 <div>
-	<%= f.label :description %>
+	<%= f.label "Beschreibung" %>
 	<%= f.text_area :description %>
 </div>
 
+<div>
+	<%= f.label "Spieleranzahl" %>
+	<%= f.select :players, Game::NUMBER_OF_PLAYERS.collect{ |k, v| [v, k] }, prompt_for_selects %>
+</div>
 
 <div>
-	<%= f.label :location %>
-	<%= f.select :location, Game::Positions, { :prompt => 'Bitte Auswählen...' } %>
+	<%= f.label "Spielort" %>
+	<%= f.select :location, Game::LOCATIONS.collect{ |k, v| [v, k]}, prompt_for_selects %>
 </div>
+
+<div>
+	<%= f.label "Spielform" %>
+	<%= f.select :form, Game::FORM.collect{ |k, v| [v, k] }, prompt_for_selects %>
+</div>
+
+<div>
+	<%= f.label "Spielintensität" %>
+	<%= f.select :intensity, Game::INTENSITY_LEVELS.collect{ |k, v| [v, k] }, prompt_for_selects %>
+</div>
+
 
 <div>
 	<%= f.submit label %>

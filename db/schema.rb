@@ -10,21 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101013122957) do
+ActiveRecord::Schema.define(:version => 20101013211102) do
 
   create_table "games", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.text     "extension"
-    t.string   "location"
-    t.string   "intensity"
-    t.string   "form"
+    t.integer  "location",    :limit => 255
+    t.integer  "intensity",   :limit => 255
+    t.integer  "form",        :limit => 255
     t.string   "content"
     t.text     "note"
-    t.integer  "min_players"
-    t.integer  "max_players"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "players"
   end
 
 end

@@ -8,7 +8,17 @@
 </div>
 
 <div>
+	<%= label_tag "Spieleranzahl" %>
+	<%= select_tag :number_of_players, options_for_select(Game::NUMBER_OF_PLAYERS.collect{ |k, v| [v, k ] }) %>
+</div>
+
+<div>
 	<%= submit_tag "Suchen" %>
 </div>
 
 <% end %>
+
+
+<p>
+	<%= link_to "Home", "/" %>
+</p>

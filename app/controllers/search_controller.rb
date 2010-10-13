@@ -6,7 +6,7 @@ class SearchController < ApplicationController
   end
   
   def results
-    @games = Game.where("name like ?", "%#{params[:name]}%")
+    @games = Game.where("name like ?", "%#{params[:name]}%").where(:players => params[:number_of_players])
   end
   
   def quick_search
