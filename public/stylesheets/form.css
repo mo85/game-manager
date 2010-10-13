@@ -1,0 +1,50 @@
+form.default {
+	margin-top: 0px;
+}
+
+form.default div {
+  padding: 5px;
+}
+
+form.default label {
+  float: left;
+  width: 200px;
+  display: block;
+}
+
+form.default div div label {
+  width: 150px;
+}
+
+form.default div.fieldWithErrors {
+  padding: 0;
+  clear: none;
+  float: left;
+  font-weight: bold;
+}
+
+form.default div div {
+  float: left;
+  clear: none;
+  padding: 0;
+}
+
+
+form.default div div div {
+  float: none;
+}
+
+form.default textarea {
+  width: 400px;
+  height: 170px;
+}
+
+
+form.default label.bold {
+    font-weight: bold;
+}
+
+form.default h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
