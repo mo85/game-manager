@@ -1,5 +1,16 @@
-<h1>Suchergebnisse</1>
-	
-<p>
+<h1>Suchergebnisse</h1>
+
+
+<% if @games.empty? %>
+
 	Es wurden keine Resultate gefunden...
+
+<% else %>
+	
+	<%= render :partial => "/games/games_table", :locals => { :games => @games} %>
+	
+<% end %>
+
+<p>
+	<%= link_to "Zurück", search_path %>
 </p>

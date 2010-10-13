@@ -1,6 +1,6 @@
 <h1><%= @title %></h1>
 
-<% form_tag(:action => :results) do %>
+<%= form_tag(search_results_path, :method => :post, :class => "default") do %>
 
 <div>
 	<%= label_tag "Name" %>
