@@ -1,17 +1,22 @@
 <h1>Listing games</h1>
 
-<table>
+<table class="default">
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Location</th>
+		<th>&nbsp;</th>
   </tr>
 
 <% @games.each do |game| %>
   <tr>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= game.name %></td>
+		<td><%= game.description %></td>
+		<td><%= game.location %></td>
+		
+    <td><%= link_to 'Show', game %><br />
+    <%= link_to 'Edit', edit_game_path(game) %><br />
+    <%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

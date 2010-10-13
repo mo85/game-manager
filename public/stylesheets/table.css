@@ -1,0 +1,118 @@
+table {
+  border-collapse: collapse;
+}
+
+table.default {
+  width: 100%;
+}
+
+table.default th,
+table.default td {
+    padding: 3px 5px;
+}
+table.default th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+table.default td {
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+table.default tr.summary_row td {
+	font-weight: bold;
+	border-top: 2px solid #000!important;
+}
+
+table.default tr.marked td {
+  background-color: #FAFAFA;
+}
+
+table.default tr.smaller td {
+	font-size: 11px;
+}
+
+table.default tr.smaller th {
+	font-size: 14px;
+}
+
+table.forum {
+	width: 100%;
+}
+
+table.forum tr th {
+	background-color: #051659;
+	color: white;
+	padding: 5px;
+	text-align: left;
+	border: 1px solid white;
+}
+
+table tr td.author {
+	font-size: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table tr td.date {
+	font-size: 10px;
+	vertical-align: top;
+}
+
+table.forum tr td {
+	border: 1px solid white;
+	padding: 5px;
+}
+
+table.forum tr.even-line td{
+	background-color: #cfddff;
+}
+
+table.forum tr.odd-line td {
+	background-color: #f0f0f0;
+}
+
+table.facts {
+	line-height: 1.5em;
+	margin-bottom: 10px;
+}
+
+table.facts tr td.key {
+	vertical-align: top;
+	width: 150px;
+	font-weight: bold;
+}
+
+table.stats_table {
+  width: 100%;
+}
+
+table.stats_table th,
+table.stats_table td {
+    padding: 3px 5px;
+}
+table.stats_table th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+table.stats_table td {
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.stats_table th.sorttable_sorted, .stats_table th.sorttable_sorted_reverse {
+  background: lightgray url('/images/sort-desc.png') no-repeat right center;
+  color: black;
+}
+
+.stats_table th.sorttable_sorted_reverse {
+  background-image: url('/images/sort-asc.png');
+}
+
+.stats_table th {
+    background: #051659;
+    color: white;
+    cursor: pointer;
+}

@@ -1,17 +1,23 @@
-<%= form_for(@game) do |f| %>
-  <% if @game.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
+<% form_for @game, :html => { :class => :default } do |f| %>
 
-      <ul>
-      <% @game.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+</div>
+
+
+<div>
+	<%= f.label :location %>
+	<%= f.select :location, Game::Positions, { :prompt => 'Bitte Auswählen...' } %>
+</div>
+
+<div>
+	<%= f.submit label %>
+</div>
+
 <% end %>

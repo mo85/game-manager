@@ -1,0 +1,14 @@
+<h1><%= @title %></h1>
+
+<% form_tag(:action => :results) do %>
+
+<div>
+	<%= label_tag "Name" %>
+	<%= text_field_tag :name %>
+</div>
+
+<div>
+	<%= submit_tag "Suchen" %>
+</div>
+
+<% end %>
