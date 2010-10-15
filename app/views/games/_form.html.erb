@@ -1,4 +1,4 @@
-<% form_for @game, :html => { :class => :default } do |f| %>
+<%= form_for @game, :html => { :class => :default } do |f| %>
 
 <div>
 	<%= f.label "Name" %>
@@ -11,13 +11,34 @@
 </div>
 
 <div>
+	<%= f.label "Varianten" %>
+	<%= f.text_area :extension %>
+</div>
+
+<div>
 	<%= f.label "Spieleranzahl" %>
-	<%= f.select :players, Game::NUMBER_OF_PLAYERS.collect{ |k, v| [v, k] }, prompt_for_selects %>
+	<% player_counts = PlayerCount.all %>
+	<div class="check-boxes">
+		<% player_counts.each do |c| %>
+		<label class='check-box-label'>
+			<%= check_box_tag c.id %>
+			<%= "#{c}" %>
+		</label><br>
+		<% end %>
+	</div>
 </div>
 
 <div>
 	<%= f.label "Spielort" %>
-	<%= f.select :location, Game::LOCATIONS.collect{ |k, v| [v, k]}, prompt_for_selects %>
+	<% locations = Location.all %>
+	<div class="check-boxes">
+		<% locations.each do |l| %>
+		<label class='check-box-label'>
+			<%= check_box_tag l.id %>
+			<%= l.description %>
+		</label><br>
+		<% end %>
+	</div>
 </div>
 
 <div>
@@ -30,7 +51,32 @@
 	<%= f.select :intensity, Game::INTENSITY_LEVELS.collect{ |k, v| [v, k] }, prompt_for_selects %>
 </div>
 
+<div>
+	<%= f.label "Spielart" %>
+	<div class="check-boxes">
+		<% categories = Category.all %>
+		<% categories.each do |c| %>
+		<label class="check-box-label">
+			<%= check_box_tag c.id %>
+			<%= c.name %>
+		</label><br>
+		<% end %>
+	</div>
+</div>
 
+<div>
+	<%= f.label "Spielinhalt" %>
+	<div class="check-boxes">
+		<% categories = Content.all %>
+		<% categories.each do |c| %>
+		<label class="check-box-label">
+			<%= check_box_tag c.id %>
+			<%= c.name %>
+		</label><br>
+		<% end %>
+	</div>
+</div>
+	
 <div>
 	<%= f.submit label %>
 </div>

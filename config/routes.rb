@@ -1,4 +1,8 @@
 GameManager::Application.routes.draw do
+  resources :contents
+
+  resources :categories
+
   resources :games
 
   # The priority is based upon order of creation:

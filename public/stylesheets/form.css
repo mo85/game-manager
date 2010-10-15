@@ -16,6 +16,7 @@ form.default div div label {
   width: 150px;
 }
 
+/*
 form.default div.fieldWithErrors {
   padding: 0;
   clear: none;
@@ -33,6 +34,22 @@ form.default div div {
 form.default div div div {
   float: none;
 }
+*/
+
+form.default input[type="text"] {
+	width: 400px;
+}
+
+div.check-boxes {
+	padding: 0px !important;
+	margin: 0px !important;
+	margin-left: 200px !important;
+}
+
+label.check-box-label {
+	float: none !important; 
+	display: inline !important;
+}
 
 form.default textarea {
   width: 400px;
@@ -47,4 +64,8 @@ form.default label.bold {
 form.default h2 {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+label.inline {
+	display: inline;
 }

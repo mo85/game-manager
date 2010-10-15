@@ -10,20 +10,65 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101013211102) do
+ActiveRecord::Schema.define(:version => 20101015115944) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_games", :id => false, :force => true do |t|
+    t.integer "game_id"
+    t.integer "category_id"
+  end
+
+  create_table "contents", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contents_games", :id => false, :force => true do |t|
+    t.integer "game_id"
+    t.integer "content_id"
+  end
 
   create_table "games", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.text     "extension"
-    t.integer  "location",    :limit => 255
     t.integer  "intensity",   :limit => 255
     t.integer  "form",        :limit => 255
-    t.string   "content"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "players"
+  end
+
+  create_table "games_locations", :id => false, :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games_player_counts", :id => false, :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "player_count_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "player_counts", :force => true do |t|
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
