@@ -40,7 +40,20 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.xml
   def create
+    player_counts = []
+    params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
+
+    locations = []
+    params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
+    
+    categories = []
+    params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
+    
+    contents = []
+    params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
+        
     @game = Game.new(params[:game])
+    @game.player_counts = player_counts
 
     respond_to do |format|
       if @game.save
@@ -57,9 +70,29 @@ class GamesController < ApplicationController
   # PUT /games/1.xml
   def update
     @game = Game.find(params[:id])
-
+    
+    @game.player_counts = []
+    player_counts = []
+    params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
+    
+    @game.locations = []
+    locations = []
+    params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
+    
+    @game.categories = []
+    categories = []
+    params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
+    
+    @game.contents = []
+    contents = []
+    params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
+    
     respond_to do |format|
       if @game.update_attributes(params[:game])
+        @game.player_counts = player_counts
+        @game.locations = locations
+        @game.contents = contents
+        @game.categories = categories
         format.html { redirect_to(@game, :notice => 'Game was successfully updated.') }
         format.xml  { head :ok }
       else

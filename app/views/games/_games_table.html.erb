@@ -12,8 +12,18 @@
   <tr>
 		<td><%= link_to game.name, game %></td>
 		<td><%= game.description %></td>
-		<td><%= game.players_to_s %></td>
-		<td><%= "location" %></td>
+		<td>
+			<ul>
+				<% game.player_counts.each do |c| %>
+					<li><%= c %></li>
+				<% end %>
+			</ul>
+		</td>
+		<td>
+			<% game.locations.each do |l| %>
+				<li><%= l %></li>
+			<% end %>
+		</td>
 		<td><%= game.form_to_s %></td>
 		
     <td><%= link_to 'Anpassen', edit_game_path(game) %><br />

@@ -9,8 +9,66 @@
 
 <div>
 	<%= label_tag "Spieleranzahl" %>
-	<%= select_tag :number_of_players, options_for_select(Game::NUMBER_OF_PLAYERS.collect{ |k, v| [v, k ] }) %>
+	<% player_counts = PlayerCount.all %>
+	<div class="check-boxes">
+		<% player_counts.each do |c| %>
+		<label class='check-box-label'>
+			<%= check_box_tag c.id %>
+			<%= "#{c}" %>
+		</label><br>
+		<% end %>
+	</div>
 </div>
+
+<div>
+	<%= label_tag "Spielort" %>
+	<% locations = Location.all %>
+	<div class="check-boxes">
+		<% locations.each do |l| %>
+		<label class='check-box-label'>
+			<%= check_box_tag "location_#{l.id}" %>
+			<%= l.description %>
+		</label><br>
+		<% end %>
+	</div>
+</div>
+
+<div>
+	<%= label_tag "Spielform" %>
+	<%= select :game, "form", Game::FORM.collect{ |k, v| [v, k] }, prompt_for_selects %>
+</div>
+
+<div>
+	<%= label_tag "Spielintensität" %>
+	<%= select :game, "intensity",  Game::INTENSITY_LEVELS.collect{ |k, v| [v, k] }, prompt_for_selects %>
+</div>
+
+<div>
+	<%= label_tag "Spielart" %>
+	<div class="check-boxes">
+		<% categories = Category.all %>
+		<% categories.each do |c| %>
+		<label class="check-box-label">
+			<%= check_box_tag "category_#{c.id}" %>
+			<%= c.name %>
+		</label><br>
+		<% end %>
+	</div>
+</div>
+
+<div>
+	<%= label_tag "Spielinhalt" %>
+	<div class="check-boxes">
+		<% content = Content.all %>
+		<% content.each do |c| %>
+		<label class="check-box-label">
+			<%= check_box_tag "content_#{c.id}" %>
+			<%= c.name %>
+		</label><br>
+		<% end %>
+	</div>
+</div>
+
 
 <div>
 	<%= submit_tag "Suchen" %>

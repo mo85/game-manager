@@ -1,19 +1,18 @@
 <h1>Listing contents</h1>
 
-<table>
+<table class="default">
   <tr>
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Aktion</th>
   </tr>
 
 <% @contents.each do |content| %>
   <tr>
     <td><%= content.name %></td>
-    <td><%= link_to 'Show', content %></td>
-    <td><%= link_to 'Edit', edit_content_path(content) %></td>
-    <td><%= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', content %><br>
+    		<%= link_to 'Edit', edit_content_path(content) %><br>
+    		<%= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
   </tr>
 <% end %>
 </table>
