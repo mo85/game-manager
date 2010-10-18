@@ -3,8 +3,8 @@
 <%= form_tag(search_results_path, :method => :post, :class => "default") do %>
 
 <div>
-	<%= label_tag "Name" %>
-	<%= text_field_tag :name %>
+	<%= label_tag "Schlüsselbegriff" %>
+	<%= text_field_tag "game[keyword]" %>
 </div>
 
 <div>

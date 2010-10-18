@@ -6,11 +6,32 @@ class SearchController < ApplicationController
   end
   
   def results
-    @games = Game.where("name like ?", "%#{params[:name]}%")
+    puts params
+    
+    
+    name = params[:game][:keyword]
+    
+    @games = simple_query(name)
+    
+    unless params[:game][:form].blank?
+      @games = @games.where(:form => params[:game][:form])
+    end
+    
+    unless params[:game][:intensity].blank?
+      @games = @games.where(:intensity => params[:game][:intensity])
+    end
+    
   end
   
   def quick_search
-    @games = Game.where("name like ?", "%#{params[:query]}")
+    @games = simple_query
+  end
+  
+  private
+  
+  def simple_query(query)
+    t = Game.arel_table
+    Game.where(t[:name].matches("%#{query}%").or(t[:description].matches("%#{query}%")))
   end
   
 end

@@ -73,19 +73,19 @@ class GamesController < ApplicationController
     
     @game.player_counts = []
     player_counts = []
-    params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
+    params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) } if params[:game][:player_counts]
     
     @game.locations = []
     locations = []
-    params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
+    params[:game].delete(:locations).each {|e| (locations << Location.find(e)) } if params[:game][:locations]
     
     @game.categories = []
     categories = []
-    params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
+    params[:game].delete(:categories).each {|e| (categories << Category.find(e)) } if params[:game][:categories]
     
     @game.contents = []
     contents = []
-    params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
+    params[:game].delete(:contents).each {|e| (contents << Content.find(e)) } if params[:game][:contents]
     
     respond_to do |format|
       if @game.update_attributes(params[:game])

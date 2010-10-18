@@ -8,7 +8,7 @@ class Game < ActiveRecord::Base
   validates_presence_of :name
   
   default_scope order('name')
-
+  
   ::INTENSITY_LEVELS = { 0 => "gemaessigt", 1 => "aktiv", 2 => "sehr aktiv" }
   ::FORM = { 0 => "alle miteinander", 1 => "alle gegen alle", 2 => "alle gegen einen", 3 => "Mannschaften gegeineinander" }
   
