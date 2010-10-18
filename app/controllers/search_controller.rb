@@ -39,7 +39,7 @@ class SearchController < ApplicationController
   
   def simple_query(query)
     t = Game.arel_table
-    Game.where(t[:name].matches("%#{query}%").or(t[:description].matches("%#{query}%")))
+    Game.where(t[:name].matches("%#{query}%"))
   end
   
 end
