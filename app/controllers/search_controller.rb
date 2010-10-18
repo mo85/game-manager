@@ -27,7 +27,12 @@ class SearchController < ApplicationController
   end
   
   def quick_search
-    @games = simple_query
+    @games = simple_query params[:game][:query]
+    
+    respond_to do |format|
+      format.js
+    end
+    
   end
   
   private

@@ -14,6 +14,8 @@ GameManager::Application.routes.draw do
   
   match "search" => 'search#index'
   match "search/results" => 'search#results'
+  
+  match "quicksearch" => "search#quick_search"
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
