@@ -20,8 +20,21 @@ class SearchController < ApplicationController
       @games = @games.where(:intensity => params[:game][:intensity])
     end
     
+    unless params[:game][:location].blank?
+      @games = @games.joins(:locations).where("locations.id = ?", params[:game][:location])
+    end
     
+    unless params[:game][:player_count].blank?
+      @games = @games.joins(:player_counts).where("player_count_id = ?", params[:game][:player_count])
+    end
     
+    unless params[:game][:category].blank?
+      @games = @games.joins(:categories).where("category_id = ?", params[:game][:category])
+    end
+    
+    unless params[:game][:content].blank?
+      @games = @games.joins(:contents).where("content_id = ?", params[:game][:content])
+    end
     
   end
   
