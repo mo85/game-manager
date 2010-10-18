@@ -17,6 +17,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 	
 	<% end %>
 	
+	<p id="search-results" style="display: none;">
+		
+	</p>
+	
 </p>
 
 <p>
@@ -34,5 +38,5 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 </p>
 
 <script type="text/javascript" charset="utf-8">
-	new Ajax.Autocompleter("game_query", "game_choices", "<%= quicksearch_path %>");
+	Manager.Utilities.Search.addAutocompletion();
 </script>

@@ -1,0 +1,73 @@
+<table class="default">
+	<tbody>
+		<tr>
+			<td class="property">Name</td>
+			<td class="value"><%= @game.name %></td>
+		</tr>
+
+		<tr>
+			<td class="property">Beschreibung</td>
+			<td class="value"><%= @game.description %></td>
+		</tr>
+		
+		<tr>
+			<td class="property">Spieleranzahl</td>
+			<td class="value">
+				<ul>
+				<% @game.player_counts.each do |p| %>
+					<li><%= p %></li>
+				<% end %>
+				</ul>
+			</td>
+		</tr>	
+		
+		<tr>
+			<td class="property">Spielort</td>
+			<td class="value">
+				<ul>
+				<% @game.locations.each do |l| %>
+					<li><%= l %></li>
+				<% end %>
+				</ul>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="property">Spielform</td>
+			<td class="value"><%= @game.form_to_s %></td>
+		</tr>
+		
+		<tr>
+			<td class="property">Spielart</td>
+			<td class="value">
+				<ul>
+				<% @game.categories.each do |l| %>
+					<li><%= l %></li>
+				<% end %>
+				</ul>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="property">Spielinhalt</td>
+			<td class="value">
+				<ul>
+				<% @game.contents.each do |l| %>
+					<li><%= l %></li>
+				<% end %>
+				</ul>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="property">Spielintensität</td>
+			<td class="value"><%= @game.intensity_to_s %></td>
+		</tr>
+		
+		<tr>
+			<td class="property">Varianten</td>
+			<td class="value"><%= @game.extension %></td>
+		</tr>
+		
+	</tbody>
+</table>
