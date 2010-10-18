@@ -8,7 +8,6 @@ class SearchController < ApplicationController
   def results
     puts params
     
-    
     name = params[:game][:keyword]
     
     @games = simple_query(name)
