@@ -1,9 +1,84 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @game.name %></h1>
+<h1>Spiel Details</h1>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	
+	<table class="default">
+		<tbody>
+			<tr>
+				<td class="property">Name</td>
+				<td class="value"><%= @game.name %></td>
+			</tr>
+
+			<tr>
+				<td class="property">Beschreibung</td>
+				<td class="value"><%= @game.description %></td>
+			</tr>
+			
+			<tr>
+				<td class="property">Spieleranzahl</td>
+				<td class="value">
+					<ul>
+					<% @game.player_counts.each do |p| %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</td>
+			</tr>	
+			
+			<tr>
+				<td class="property">Spielort</td>
+				<td class="value">
+					<ul>
+					<% @game.locations.each do |l| %>
+						<li><%= l %></li>
+					<% end %>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="property">Spielform</td>
+				<td class="value"><%= @game.form_to_s %></td>
+			</tr>
+			
+			<tr>
+				<td class="property">Spielart</td>
+				<td class="value">
+					<ul>
+					<% @game.categories.each do |l| %>
+						<li><%= l %></li>
+					<% end %>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="property">Spielinhalt</td>
+				<td class="value">
+					<ul>
+					<% @game.contents.each do |l| %>
+						<li><%= l %></li>
+					<% end %>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="property">Spielintensität</td>
+				<td class="value"><%= @game.intensity_to_s %></td>
+			</tr>
+			
+			<tr>
+				<td class="property">Varianten</td>
+				<td class="value"><%= @game.extension %></td>
+			</tr>
+			
+		</tbody>
+	</table>
+	
+
 </p>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |

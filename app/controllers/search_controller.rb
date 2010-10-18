@@ -21,6 +21,9 @@ class SearchController < ApplicationController
       @games = @games.where(:intensity => params[:game][:intensity])
     end
     
+    
+    
+    
   end
   
   def quick_search

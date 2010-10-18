@@ -12,6 +12,10 @@ class Game < ActiveRecord::Base
   ::INTENSITY_LEVELS = { 0 => "gemaessigt", 1 => "aktiv", 2 => "sehr aktiv" }
   ::FORM = { 0 => "alle miteinander", 1 => "alle gegen alle", 2 => "alle gegen einen", 3 => "Mannschaften gegeineinander" }
   
+  def intensity_to_s
+    ::INTENSITY_LEVELS[self.intensity]
+  end
+  
   def form_to_s
     ::FORM[self.form]
   end
