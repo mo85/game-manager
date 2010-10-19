@@ -2,8 +2,8 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.xml
   def index
-    @games = Game.all
-
+    @games = Game.paginate :page => params[:page], :per_page => 10
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @games }
