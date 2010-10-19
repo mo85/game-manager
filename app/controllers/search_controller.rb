@@ -36,6 +36,8 @@ class SearchController < ApplicationController
       @games = @games.joins(:contents).where("content_id = ?", params[:game][:content])
     end
     
+    @games = @games.paginate :page => params[:page], :per_page => 10
+    
   end
   
   def quick_search

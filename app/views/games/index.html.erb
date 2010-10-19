@@ -1,8 +1,16 @@
 <h1>Verfügbare Spiele</h1>
 
+<p>
+	<%= page_entries_info @games %>
+</p>
+
 <div>
 <%= render :partial => "games_table", :locals => { :games => @games } %>
 </div>
+
+<p>
+	<%= will_paginate @games %>
+</p>
 
 <p>
 	<%= link_to "Home", "/" %> | <%= link_to 'Neues Spiel erfassen', new_game_path %>

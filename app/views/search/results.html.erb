@@ -6,8 +6,16 @@
 	Es wurden keine Resultate gefunden...
 
 <% else %>
+
+	<p>
+		<%= page_entries_info @games %>
+	</p>
 	
 	<%= render :partial => "/games/games_table", :locals => { :games => @games} %>
+	
+	<p>
+		<%= will_paginate @games, :params => params %>
+	</p>
 	
 <% end %>
 
