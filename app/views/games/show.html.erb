@@ -6,5 +6,6 @@
 	<%= render :partial => "properties", :locals => { :game => @game } %>
 </p>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<% content_for :menu do%>
+	<li><%= link_to 'Spiel Anpassen', edit_game_path(@game) %></li>
+<% end %>

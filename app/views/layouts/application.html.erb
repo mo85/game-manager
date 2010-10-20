@@ -11,14 +11,33 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
+    <div id="page">
+	
+			<div id="header">
+				
+			</div>
 	
 			<div id="content">
-	      <% flash.each do |name, msg| %>
-	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	      <% end %>
-	      <%= content_tag :h1, yield(:title) if show_title? %>
-	      <%= yield %>
+				
+				<div class="left-column">
+					<ul class="navigation">
+						<li><%= link_to "Home", "/" %></li>
+						<li><%= link_to "Spielesuche", search_path %></li>
+						<li><%= link_to "Spielearchiv", games_path %></li>
+						<%= yield(:menu) %>
+						<li><%= link_to "Kontakt", "#" %></li>
+					</ul>
+				</div>
+				
+				<div class="right-column">
+				
+	      	<% flash.each do |name, msg| %>
+		        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		      <% end %>
+		      <%= content_tag :h1, yield(:title) if show_title? %>
+		      <%= yield %>
+				</div>
+				
 			</div>
     </div>
   </body>

@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
   
   def index
-    @title = "Advanced Search"
     @games = []
   end
   

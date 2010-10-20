@@ -12,6 +12,7 @@
 	<%= will_paginate @games %>
 </p>
 
-<p>
-	<%= link_to "Home", "/" %> | <%= link_to 'Neues Spiel erfassen', new_game_path %>
-</p>
+
+<% content_for :menu do %>
+	<li><%= link_to 'Neues Spiel', new_game_path %></li>
+<% end %>
