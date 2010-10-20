@@ -31,7 +31,7 @@ a:visited {
   width: 1000px;
   margin: 0 auto;
   padding: 0px;
-  border: solid 1px black;
+  padding-top: 30px;
   margin-top: 20px;
 	background:  url(/images/layout/Background.png);
 	background-repeat: repeat-y;
@@ -49,9 +49,15 @@ ul.navigation li {
 
 #header {
 	margin-top: 30px;
-	background: red;
+	background: url(/images/layout/Header.png);
 	height: 150px;
 	z-index: 1000;
+}
+
+#footer {
+	height: 200px;
+	background: url(/images/layout/Footer.png);
+	
 }
 
 #content {
@@ -61,6 +67,8 @@ ul.navigation li {
 div.left-column {
 	width: 200px;
 	float: left;
+	min-height: 500px;
+	background: url(/images/layout/sidebar.png);
 }
 
 div.right-column {
