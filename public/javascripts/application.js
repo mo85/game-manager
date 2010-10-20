@@ -9,6 +9,7 @@ Manager.Utilities = {
 					$('search-results').setStyle({display: 'none'});
 					new Ajax.Updater('search-results', "/games/show/" + elem.title);
 					$('search-results').toggle();
+					Effect.BlindDown('search-results');
 				}
 			});
 			
