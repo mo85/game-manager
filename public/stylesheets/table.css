@@ -8,17 +8,23 @@ table.default {
 
 table.default th,
 table.default td {
-    padding: 3px 5px;
+  padding: 3px 5px;
 }
 table.default th {
     text-align: left;
     font-weight: bold;
     border-bottom: 1px solid #ccc;
 }
+
 table.default td {
   border-bottom: 1px solid #eee;
   vertical-align: middle;
 	font-size: smaller;
+}
+
+table.default td ul {
+	margin: 0px;
+	padding-left: 20px;
 }
 
 table.default tr.summary_row td {
