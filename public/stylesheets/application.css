@@ -70,7 +70,7 @@ div.left-column {
 	background: url(/images/layout/sidebar.png);
 	background-repeat: no-repeat;
 	min-height: 500px;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 div.right-column {
