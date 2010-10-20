@@ -23,7 +23,7 @@
 						<li><%= link_to "Spielesuche", search_path %></li>
 						<li><%= link_to "Spielearchiv", games_path %></li>
 						<%= yield(:menu) %>
-						<li><%= link_to "Kontakt", "#" %></li>
+						<li><%= link_to "Kontakt", :controller => "root", :action => "contact"%></li>
 					</ul>
 				</div>
 				
