@@ -1,7 +1,11 @@
 body {
   background-color: white;
-  font-family: Courier New, Courier, Verdana;
+  font-family: "Courier New", Courier, Verdana;
   font-size: 14px;
+}
+
+h1, h2, h3 {
+	color: #492614;
 }
 
 a img {
@@ -9,7 +13,12 @@ a img {
 }
 
 a {
-  color: #0000FF;
+  color: #492614;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #916e45;
 }
 
 .clear {
@@ -18,7 +27,7 @@ a {
   overflow: hidden;
 }
 
-#container {
+#page {
   width: 1000px;
   margin: 0 auto;
   padding: 0px;
@@ -28,9 +37,37 @@ a {
 	background-repeat: repeat-y;
 }
 
+ul.navigation {
+	padding: 5px;
+	padding-top: 50px;
+}
+
+ul.navigation li {
+	list-style-type: none;
+	font-size: 20px;
+}
+
+#header {
+	margin-top: 30px;
+	background: red;
+	height: 150px;
+	z-index: 1000;
+}
+
 #content {
 	padding: 20px 40px;
 }
+
+div.left-column {
+	width: 200px;
+	float: left;
+}
+
+div.right-column {
+	margin-left: 200px;
+	width: 700px;
+}
+
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
