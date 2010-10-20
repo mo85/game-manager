@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GameManager</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-	
-	<div id="page">
-	
-	<div id="header">
-		Willkommen auf meiner seite....
-	</div>
-
-	
-	<div id="content">
-		<%= yield %>
-	</div>
-	
-	</div>
-
-</body>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Aninas Gamemanager" %></title>
+    <%= stylesheet_link_tag "application" %>
+		<%= stylesheet_link_tag "form" %>
+		<%= stylesheet_link_tag "autocompleter" %>
+		<%= stylesheet_link_tag "table" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </div>
+  </body>
 </html>

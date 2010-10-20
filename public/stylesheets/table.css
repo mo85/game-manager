@@ -16,8 +16,9 @@ table.default th {
     border-bottom: 1px solid #ccc;
 }
 table.default td {
-    border-bottom: 1px solid #eee;
-    vertical-align: middle;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+	font-size: smaller;
 }
 
 table.default tr.summary_row td {

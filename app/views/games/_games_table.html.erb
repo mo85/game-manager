@@ -3,7 +3,6 @@
     <th width="15%">Name</th>
     <th width="40%">Beschreibung</th>
     <th width="15%">Spieleranzahl</th>
-    <th width="10%">Spielort</th>
     <th width="12%">Spielform</th>
 		<th width="5%">&nbsp;</th>
   </tr>
@@ -18,11 +17,6 @@
 					<li><%= c %></li>
 				<% end %>
 			</ul>
-		</td>
-		<td>
-			<% game.locations.each do |l| %>
-				<li><%= l %></li>
-			<% end %>
 		</td>
 		<td><%= game.form_to_s %></td>
 		
