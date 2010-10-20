@@ -39,7 +39,7 @@ a:visited {
 
 ul.navigation {
 	padding: 5px;
-	padding-top: 50px;
+	padding-top: 75px;
 }
 
 ul.navigation li {
@@ -61,21 +61,23 @@ ul.navigation li {
 }
 
 #content {
-	padding: 20px 40px;
+	padding: 40px 0px;
 }
 
 div.left-column {
 	width: 200px;
 	float: left;
-	min-height: 500px;
 	background: url(/images/layout/sidebar.png);
+	background-repeat: no-repeat;
+	min-height: 500px;
+	padding-left: 20px;
 }
 
 div.right-column {
 	margin-left: 200px;
+	padding-left: 40px;
 	width: 700px;
 }
-
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
