@@ -41,18 +41,28 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.xml
   def create
-    player_counts = []
-    params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
-
-    locations = []
-    params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
+    puts params
     
-    categories = []
-    params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
+    if params[:game][:player_counts]
+      player_counts = []
+      params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
+    end
+      
+    if params[:game][:locations]
+      locations = []
+      params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
+    end
     
-    contents = []
-    params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
-        
+    if params[:game][:categories]
+      categories = []
+      params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
+    end
+    
+    if params[:game][:contents]
+      contents = []
+      params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
+    end
+    
     @game = Game.new(params[:game])
     @game.player_counts = player_counts
 

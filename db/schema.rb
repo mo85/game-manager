@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101015115944) do
+ActiveRecord::Schema.define(:version => 20101019143110) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20101015115944) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "other_names"
   end
 
   create_table "games_locations", :id => false, :force => true do |t|
