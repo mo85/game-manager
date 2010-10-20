@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  font-family: Verdana, Helvetica, Arial;
+  font-family: Courier New, Courier, Verdana;
   font-size: 14px;
 }
 
@@ -21,11 +21,15 @@ a {
 #container {
   width: 1000px;
   margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
+  padding: 0px;
   border: solid 1px black;
   margin-top: 20px;
-	
+	background:  url(/images/layout/Background.png);
+	background-repeat: repeat-y;
+}
+
+#content {
+	padding: 20px 40px;
 }
 
 #flash_notice, #flash_error, #flash_alert {
