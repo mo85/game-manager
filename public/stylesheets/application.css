@@ -48,9 +48,9 @@ ul.navigation li {
 }
 
 #header {
-	margin-top: 30px;
-	background: url(/images/layout/Header.png);
-	height: 150px;
+	margin-top:10px;
+	background: url(/images/layout/Header_01.png);
+	height: 300px;
 	z-index: 1000;
 }
 
