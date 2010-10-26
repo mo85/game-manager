@@ -1,0 +1,125 @@
+body {
+  background-color: white;
+  font-family: "Courier New", Courier, Verdana;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+	color: #492614;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #492614;
+	font-weight: regular;
+}
+
+a:visited {
+	color: #916e45;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#page {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+  padding-top: 30px;
+  margin-top: 20px;
+	background:  url(/images/layout/Background_01.png);
+	background-repeat: repeat-y;
+}
+
+ul.navigation {
+	padding: 5px;
+	padding-top: 75px;
+}
+
+ul.navigation li {
+	list-style-type: none;
+	font-size: 20px;
+}
+
+#header {
+	margin-top:10px;
+	background: url(/images/layout/Header_06.png);
+	height: 500px;
+	z-index: 1000;
+}
+
+#footer {
+	height: 400px;
+	background: url(/images/layout/Footer_02.png);
+	
+}
+
+#content {
+	padding: 40px 0px;
+}
+
+div.left-column {
+	width: 200px;
+	float: left;
+	min-height: 500px;
+	padding-left: 10px;
+}
+
+div.right-column {
+	margin-left: 200px;
+	padding-left: 40px;
+	width: 700px;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}

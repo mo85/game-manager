@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Aninas Gamemanager" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Zettelkasten" %></title>
     <%= stylesheet_link_tag "application" %>
 		<%= stylesheet_link_tag "form" %>
 		<%= stylesheet_link_tag "autocompleter" %>
@@ -19,6 +19,10 @@
 				
 				<div class="left-column">
 					<ul class="navigation">
+						<p>
+							
+							
+						</p>
 						<li><%= link_to "Home", "/" %></li>
 						<li><%= link_to "Spielesuche", search_path %></li>
 						<li><%= link_to "Spielearchiv", games_path %></li>

@@ -14,7 +14,7 @@ a img {
 
 a {
   color: #492614;
-	font-weight: bold;
+	font-weight: regular;
 }
 
 a:visited {
@@ -33,7 +33,7 @@ a:visited {
   padding: 0px;
   padding-top: 30px;
   margin-top: 20px;
-	background:  url(/images/layout/Background.png);
+	background:  url(/images/layout/Background_02.png);
 	background-repeat: repeat-y;
 }
 
@@ -48,15 +48,15 @@ ul.navigation li {
 }
 
 #header {
-	margin-top: 30px;
-	background: url(/images/layout/Header.png);
-	height: 150px;
+	background: url(/images/layout/Header_07.png);
+	height: 300px;
 	z-index: 1000;
+	padding-left:5px;
 }
 
 #footer {
-	height: 200px;
-	background: url(/images/layout/Footer.png);
+	height: 150px;
+	background: url(/images/layout/Footer_03.png);
 	
 }
 
@@ -67,10 +67,11 @@ ul.navigation li {
 div.left-column {
 	width: 200px;
 	float: left;
-	background: url(/images/layout/sidebar.png);
+	background: url(/images/layout/sidebar_04.png);
 	background-repeat: no-repeat;
 	min-height: 500px;
-	padding-left: 10px;
+	padding-left: 25px;
+	padding-top: 30px;
 }
 
 div.right-column {
