@@ -1,3 +1,7 @@
+<% content_for :javascripts do %>
+<%= javascript_include_tag "tiny_mce/tiny_mce.js" %>
+<% end %>
+
 <%= form_for @game, :html => { :class => :default } do |f| %>
 
 <div>
@@ -87,3 +91,5 @@
 </div>
 
 <% end %>
+
+<%= render "/tiny_mce/init_tiny_mce" %>
