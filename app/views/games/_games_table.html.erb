@@ -10,7 +10,7 @@
 <% games.each do |game| %>
   <tr>
 		<td><%= link_to game.name, game %></td>
-		<td><%= game.description %></td>
+		<td><%= sanitize game.description %></td>
 		<td>
 			<ul>
 				<% game.player_counts.each do |c| %>
