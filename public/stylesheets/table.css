@@ -12,8 +12,9 @@ table.default td {
 }
 table.default th {
     text-align: left;
-    font-weight: bold;
+    font-weight: normal;
     border-bottom: 1px solid #ccc;
+	color: #492614
 }
 
 table.default td {
@@ -30,6 +31,7 @@ table.default td ul {
 table.default tr.summary_row td {
 	font-weight: bold;
 	border-top: 2px solid #000!important;
+	font-size: 16px;
 }
 
 table.default tr.marked td {

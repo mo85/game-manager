@@ -6,20 +6,21 @@ body {
 
 h1, h2, h3 {
 	color: #492614;
+	font-weight: normal;
 }
 
 a img {
   border: none;
+  
 }
 
 a {
   color: #492614;
-	font-weight: regular;
+	font-weight: normal;
 }
 
 a:visited {
-	color: #916e45;
-}
+	color: #492614}
 
 .clear {
   clear: both;
@@ -45,6 +46,7 @@ ul.navigation {
 ul.navigation li {
 	list-style-type: none;
 	font-size: 20px;
+	font-weight: normal;
 }
 
 #header {
@@ -62,6 +64,7 @@ ul.navigation li {
 
 #content {
 	padding: 40px 0px;
+	font-size: 15px;
 }
 
 div.left-column {
