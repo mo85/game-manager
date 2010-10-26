@@ -18,7 +18,7 @@ table.default th {
 
 table.default td {
   border-bottom: 1px solid #eee;
-  vertical-align: middle;
+  vertical-align: top;
 	font-size: smaller;
 }
 
