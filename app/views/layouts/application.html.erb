@@ -21,14 +21,13 @@
 				<div class="left-column">
 					<ul class="navigation">
 						<p>
-							
-							
 						</p>
 						<li><%= link_to "Home", "/" %></li>
 						<li><%= link_to "Spielesuche", search_path %></li>
 						<li><%= link_to "Spielearchiv", games_path %></li>
 						<%= yield(:menu) %>
 						<li><%= link_to "Kontakt", :controller => "root", :action => "contact"%></li>
+						<li><%= link_to "Disclaimer", :controller => "root", :action => "disclaimer"%></li>
 					</ul>
 				</div>
 				

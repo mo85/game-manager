@@ -57,7 +57,7 @@ ul.navigation li {
 #footer {
 	height: 150px;
 	background: url(/images/layout/Footer_03.png);
-	
+	padding-bottom: none;
 }
 
 #content {
