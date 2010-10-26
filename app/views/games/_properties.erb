@@ -7,12 +7,12 @@
 		
 		<tr>
 			<td class="property">Auch bekannt unter</td>
-			<td class="value"><%= @game.other_names %></td>
+			<td class="value"><%= sanitize @game.other_names %></td>
 		</tr>
 
 		<tr>
 			<td class="property">Beschreibung</td>
-			<td class="value"><%= @game.description %></td>
+			<td class="value"><%= sanitize @game.description %></td>
 		</tr>
 		
 		<tr>
@@ -71,7 +71,7 @@
 		
 		<tr>
 			<td class="property">Varianten</td>
-			<td class="value"><%= @game.extension %></td>
+			<td class="value"><%= sanitize @game.extension %></td>
 		</tr>
 		
 	</tbody>
