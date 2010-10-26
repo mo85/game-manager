@@ -31,7 +31,6 @@ table.default td ul {
 table.default tr.summary_row td {
 	font-weight: bold;
 	border-top: 2px solid #000!important;
-	font-size: 16px;
 }
 
 table.default tr.marked td {
