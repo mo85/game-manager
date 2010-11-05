@@ -26,8 +26,17 @@
 						<li><%= link_to "Spielesuche", search_path %></li>
 						<li><%= link_to "Spielearchiv", games_path %></li>
 						<%= yield(:menu) %>
+						
+						<% if permitted_to? :manage, :users %>
+						<li><%= link_to "Benutzer", users_path %></li>
+						<% end %>
 						<li><%= link_to "Kontakt", :controller => "root", :action => "contact"%></li>
 						<li><%= link_to "Disclaimer", :controller => "root", :action => "disclaimer"%></li>
+						<% if logged_in? %>
+							<li><%= link_to "Logout", logout_path %></li>
+						<% else %>
+							<li><%= link_to "Login", login_path %></li>
+						<% end %>
 					</ul>
 				</div>
 				

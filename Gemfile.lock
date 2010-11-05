@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/stffn/declarative_authorization.git
+  revision: f680dc30f8f706ee02aabc3e56c647a8e13b9ddc
+  specs:
+    declarative_authorization (0.5.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  declarative_authorization!
   nifty-generators
   rails (= 3.0.0)
   sqlite3-ruby

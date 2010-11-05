@@ -12,7 +12,10 @@
 	<%= will_paginate @games %>
 </p>
 
+<% if permitted_to? :manage, :games %>
+	<% content_for :menu do %>
 
-<% content_for :menu do %>
-	<li><%= link_to 'Neues Spiel', new_game_path %></li>
+		<li><%= link_to 'Neues Spiel', new_game_path %></li>
+
+	<% end %>
 <% end %>

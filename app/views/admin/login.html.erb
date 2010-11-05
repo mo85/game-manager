@@ -1,0 +1,19 @@
+<%= form_tag login_path, :class => :default do %>
+	<fieldset>
+		<legend>Bitte geben Sie Ihren Benutzernamen und das Passwort ein.</legend>
+
+		<div>
+			<label for="name">Benutzername:</label>
+			<%= text_field_tag :name, params[:name], :style => "width: 119px; margin-left: 2px;" %>
+		</div>
+		
+		<div>
+			<label for="password">Passwort:</label>
+			<%= password_field_tag :password, params[:password] %>
+		</div>
+		
+		<div>
+			<%= submit_tag "Login" %>
+		</div>
+	</fieldset>
+<% end %>

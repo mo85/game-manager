@@ -20,8 +20,14 @@
 		</td>
 		<td><%= game.form_to_s %></td>
 		
-    <td><%= link_to 'Anpassen', edit_game_path(game) %><br />
-    <%= link_to 'Löschen', game, :confirm => "Bist du sicher, dass das Spiel '#{game}' gelöscht werden soll?", :method => :delete %></td>
+    <td>
+		<% if permitted_to? :manage, :games %>
+			<%= link_to 'Anpassen', edit_game_path(game) %><br />
+    	<%= link_to 'Löschen', game, :confirm => "Bist du sicher, dass das Spiel '#{game}' gelöscht werden soll?", :method => :delete %>
+		<% else %>
+		&nbsp;
+		<% end %>
+		</td>
   </tr>
 <% end %>
 </table>

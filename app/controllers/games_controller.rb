@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  filter_access_to :all
   # GET /games
   # GET /games.xml
   def index
@@ -43,23 +44,23 @@ class GamesController < ApplicationController
   def create
     puts params
     
+    player_counts = []
     if params[:game][:player_counts]
-      player_counts = []
       params[:game].delete(:player_counts).each {|e| (player_counts << PlayerCount.find(e)) }
     end
       
+    locations = []
     if params[:game][:locations]
-      locations = []
       params[:game].delete(:locations).each {|e| (locations << Location.find(e)) }
     end
     
+    categories = []
     if params[:game][:categories]
-      categories = []
       params[:game].delete(:categories).each {|e| (categories << Category.find(e)) }
     end
     
+    contents = []
     if params[:game][:contents]
-      contents = []
       params[:game].delete(:contents).each {|e| (contents << Content.find(e)) }
     end
     

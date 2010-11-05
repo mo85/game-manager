@@ -1,4 +1,5 @@
 class SearchController < ApplicationController
+  filter_access_to :all
   
   def index
     @games = []

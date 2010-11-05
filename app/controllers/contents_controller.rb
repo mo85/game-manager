@@ -1,4 +1,6 @@
 class ContentsController < ApplicationController
+  filter_access_to :all
+  
   # GET /contents
   # GET /contents.xml
   def index

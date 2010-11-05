@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  filter_access_to :all
+  
   # GET /categories
   # GET /categories.xml
   def index

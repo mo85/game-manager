@@ -11,6 +11,8 @@ gem "will_paginate", "~> 3.0.pre2"
 
 gem "nifty-generators"
 
+gem "declarative_authorization", :git => "git://github.com/stffn/declarative_authorization.git"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
